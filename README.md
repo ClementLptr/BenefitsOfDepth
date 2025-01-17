@@ -5,7 +5,7 @@ This repository contains the implementation of experimental tests validating the
 
 ### Project Overview
 The goal of this project is to empirically verify the theoretical benefits and limitations of neural network depth as presented in the paper, specifically focusing on:
-- Theorem 1.1: This theorem establishes that for any positive integer kk, there exist neural networks with Θ(k3)Θ(k3) layers, Θ(1)Θ(1) nodes per layer, and Θ(1)Θ(1) distinct parameters that cannot be approximated by networks with O(k)O(k) layers unless they are exponentially large—requiring Ω(2k)Ω(2k) nodes. 
+- Theorem 1.1: This theorem establishes that for any positive integer kk, there exist neural networks with O(k3) layers, O(1) nodes per layer, and Θ(1) distinct parameters that cannot be approximated by networks with O(k) layers unless they are exponentially large—requiring Ω(2k) nodes. 
 - Theorem 3.12: Existence of labelings realizable by deep networks but not shallow ones
 - Lemma 4.1: Probability bounds for random labeling classification
 - Relationship between network depth and approximation capabilities
@@ -78,22 +78,14 @@ python limits_of_the_depth.py
 └── report.pdf
 ```
 
-### Dependencies
-- Python 3.9.9
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
-- Tqdm
-
 ### References
 Telgarsky, M. (2016). Benefits of depth in neural networks. JMLR: Workshop and Conference Proceedings, 49:1-23.
 
-### Author
-Clément Leprêtre
-Student ID: 2101396
-Theory of Deep Learning
-CentraleSupélec
+### Author  
+Clément Leprêtre  
+Student ID: 2101396  
+Theory of Deep Learning  
+CentraleSupélec  
 SD10
 
 ### License
