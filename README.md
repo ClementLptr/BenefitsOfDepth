@@ -4,7 +4,8 @@
 This repository contains the implementation of experimental tests validating theoretical results from the paper "Benefits of Depth in Neural Networks" by Matus Telgarsky (JMLR 2016).
 
 ### Project Overview
-The goal of this project is to empirically verify the theoretical bounds and limitations of neural network depth as presented in the paper, specifically focusing on:
+The goal of this project is to empirically verify the theoretical benefits and limitations of neural network depth as presented in the paper, specifically focusing on:
+- Theorem 1.1: This theorem establishes that for any positive integer kk, there exist neural networks with Θ(k3)Θ(k3) layers, Θ(1)Θ(1) nodes per layer, and Θ(1)Θ(1) distinct parameters that cannot be approximated by networks with O(k)O(k) layers unless they are exponentially large—requiring Ω(2k)Ω(2k) nodes. 
 - Theorem 3.12: Existence of labelings realizable by deep networks but not shallow ones
 - Lemma 4.1: Probability bounds for random labeling classification
 - Relationship between network depth and approximation capabilities
@@ -16,14 +17,22 @@ The code is implemented in Python using:
 - Matplotlib and Seaborn for visualization
 - Tqdm for progress tracking
 
-Key components:
-```python
-test_depth_limitation(n_points, n_trials, hidden_layer_sizes, delta)
-analyze_and_plot_results(architectures)
-generate_conclusions(results)
-```
 
 ### Experiments
+
+#### Benefits of depth experiment
+Target Function: The target function is defined as sin(10πx), a function with oscillations. This makes the task more challenging for the neural network.
+
+Network Architectures:
+    Shallow Network: The shallow network consists of one hidden layer with 1000 neurons.
+    Deep Network: The deep network consists of four hidden layers, each with 20 neurons.
+
+
+Evaluation: After training, the models are evaluated on a test set (500 points) and the MSE of each model's predictions is calculated.
+
+Results: The performance of both models is plotted alongside the target function. The MSE values for both models are printed for comparison.
+
+#### Limits of depth experiment
 
 The implementation tests several network architectures:
 - Shallow network (1 hidden layer)
@@ -48,10 +57,13 @@ Our experiments demonstrate:
 ```bash
 # Install requirements
 pip install -r requirements.txt
-
-# Run experiments
+```
+And then run experiments
+```bash
 python benefits_of_the_depth.py
-
+```
+or
+```bash
 python limits_of_the_depth.py
 ```
 
