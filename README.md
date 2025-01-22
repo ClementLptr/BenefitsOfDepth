@@ -1,6 +1,3 @@
-Here is the corrected `README.md` with the updated project structure based on the files you listed:
-
-```markdown
 # Experimental Validation of "Benefits of Depth in Neural Networks"
 
 ## Course Project - Theory of Deep Learning (TDL)
@@ -71,6 +68,3 @@ SD10
 
 ### License
 This project is provided for academic purposes only. Please cite both the original paper and this implementation if you use this code.
-```
-
-You can now copy and paste it directly into your `README.md` file. This version reflects your actual project structure based on the files you have in the directory.
