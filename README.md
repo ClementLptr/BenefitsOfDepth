@@ -10,7 +10,7 @@ The goal of this project is to empirically verify the theoretical benefits and l
 ### Implementation Details
 The code is implemented in Python using:
 - NumPy for numerical computations
-- Scikit-learn for neural network implementation
+- PyTorch for neural network implementation
 - Matplotlib and Seaborn for visualization
 
 ### Experiment: Benefits of Depth
