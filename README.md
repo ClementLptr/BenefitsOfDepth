@@ -1,3 +1,6 @@
+Here is the corrected `README.md` with the updated project structure based on the files you listed:
+
+```markdown
 # Experimental Validation of "Benefits of Depth in Neural Networks"
 
 ## Course Project - Theory of Deep Learning (TDL)
@@ -5,77 +8,55 @@ This repository contains the implementation of experimental tests validating the
 
 ### Project Overview
 The goal of this project is to empirically verify the theoretical benefits and limitations of neural network depth as presented in the paper, specifically focusing on:
-- Theorem 1.1: This theorem establishes that for any positive integer kk, there exist neural networks with O(k3) layers, O(1) nodes per layer, and Θ(1) distinct parameters that cannot be approximated by networks with O(k) layers unless they are exponentially large—requiring Ω(2k) nodes. 
-- Theorem 3.12: Existence of labelings realizable by deep networks but not shallow ones
-- Lemma 4.1: Probability bounds for random labeling classification
-- Relationship between network depth and approximation capabilities
+- Theorem 1.1: Benefits of the depth in neural network to approximate functions 
 
 ### Implementation Details
 The code is implemented in Python using:
 - NumPy for numerical computations
 - Scikit-learn for neural network implementation
 - Matplotlib and Seaborn for visualization
-- Tqdm for progress tracking
 
+### Experiment: Benefits of Depth
+#### Target Function
+The target functions are defined as sin(10πx), a highly oscillatory function that presents a challenge for the neural network to approximate and sin(5πx) a lower oscillatory function.
 
-### Experiments
+#### Network Architectures
+- **Shallow Network**: Consists of one hidden layer with 1000 neurons.
+- **Deep Network**: Consists of four hidden layers, each with 20 neurons.
 
-#### Benefits of depth experiment
-Target Function: The target function is defined as sin(10πx), a function with oscillations. This makes the task more challenging for the neural network.
+#### Evaluation
+After training, the models are evaluated on a test set of 500 points, and the Mean Squared Error (MSE) of each model's predictions is calculated.
 
-Network Architectures:
-    Shallow Network: The shallow network consists of one hidden layer with 1000 neurons.
-    Deep Network: The deep network consists of four hidden layers, each with 20 neurons.
+#### Results
+The performance of both models is visualized alongside the target function. The MSE values for both models are compared and plotted for analysis.
 
-
-Evaluation: After training, the models are evaluated on a test set (500 points) and the MSE of each model's predictions is calculated.
-
-Results: The performance of both models is plotted alongside the target function. The MSE values for both models are printed for comparison.
-
-#### Limits of depth experiment
-
-The implementation tests several network architectures:
-- Shallow network (1 hidden layer)
-- Medium network (2 hidden layers)
-- Deep network (3 hidden layers)
-- Very deep network (4 hidden layers)
-
-For each architecture, we:
-1. Generate random 2D points
-2. Assign random binary labels
-3. Train networks of varying depth
-4. Compare empirical errors with theoretical bounds
-
-### Results
-Our experiments demonstrate:
-1. Validation of theoretical bounds from Lemma 4.1
-2. Empirical evidence of depth limitations
-3. Relationship between network complexity and performance
-4. Confirmation of the paper's theoretical predictions
+### Results Summary
+Our experiment demonstrates the benefits of increasing network depth, as shown by:
+1. The ability of the deep network to better approximate the oscillatory target function compared to the shallow network.
+2. A comparison of MSE values for both networks.
 
 ### Usage
 ```bash
 # Install requirements
 pip install -r requirements.txt
 ```
-And then run experiments
+And then run the experiment:
 ```bash
 python benefits_of_the_depth.py
-```
-or
-```bash
-python limits_of_the_depth.py
 ```
 
 ### Project Structure
 ```
 ├── README.md
 ├── requirements.txt
-├── benefits_of_the_depth.py
-├── limits_of_the_depth.py
+├── main.py
+├── model.py
+├── model_visualisation.py
+├── utils.py
 ├── results/
 │   ├── figures/
-└── report.pdf
+├── report.pdf
+└── Benefits of the depth in neural network.pdf
 ```
 
 ### References
@@ -90,3 +71,6 @@ SD10
 
 ### License
 This project is provided for academic purposes only. Please cite both the original paper and this implementation if you use this code.
+```
+
+You can now copy and paste it directly into your `README.md` file. This version reflects your actual project structure based on the files you have in the directory.
