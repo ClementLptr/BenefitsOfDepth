@@ -5,7 +5,7 @@ This repository contains the implementation of experimental tests validating the
 
 ### Project Overview
 The goal of this project is to empirically verify the theoretical benefits and limitations of neural network depth as presented in the paper, specifically focusing on:
-- Theorem 1.1 demonstrates that increasing the depth of a neural network enhances its ability to approximate complex functions. It shows that deeper networks, through their additional layers, can better capture intricate, non-linear relationships in data, outperforming shallow networks in tasks requiring high representational capacity.
+- Theorem 1.1 demonstrates that increasing the depth of a neural network enhances its ability to approximate complex functions. 
 
 ### Implementation Details
 The code is implemented in Python using:
